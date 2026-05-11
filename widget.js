@@ -1,8 +1,4 @@
-// widget.js — SAC Custom Widget: AI Insight Chat
-// Hardcoded proxy URL — no Builder Panel config needed
-
 (function () {
-  // ⬇️ HARDCODED PROXY URL — change this if your Render URL changes
   const PROXY_URL = 'https://sac-ai-proxy.onrender.com/ai-insight';
 
   const tmpl = document.createElement('template');
@@ -28,27 +24,23 @@
         <input id="q" placeholder="e.g. What's the trend in this data?" />
         <button id="send">Ask</button>
       </div>
-      <div class="hint" id="hint">Powered by Llama 3.3 via Groq — responses use the data currently shown</div>
+      <div class="hint">Powered by Llama 3.3 via Groq (free)</div>
     </div>
   `;
 
-  class AIChatWidget extends HTMLElement {
+  class IOCFOAIChat3 extends HTMLElement {
     constructor() {
       super();
       this._shadow = this.attachShadow({ mode: 'open' });
       this._shadow.appendChild(tmpl.content.cloneNode(true));
-
       this._msgs = this._shadow.getElementById('msgs');
       this._input = this._shadow.getElementById('q');
       this._btn = this._shadow.getElementById('send');
-
       this._btn.addEventListener('click', () => this._ask());
       this._input.addEventListener('keydown', e => { if (e.key === 'Enter') this._ask(); });
     }
 
-    onCustomWidgetBeforeUpdate(changedProps) {
-      // Properties no longer needed — URL is hardcoded
-    }
+    onCustomWidgetBeforeUpdate() {}
 
     _extractData() {
       try {
@@ -63,10 +55,7 @@
           }
           return out;
         });
-      } catch (e) {
-        console.warn('Data extraction failed:', e);
-        return [];
-      }
+      } catch (e) { return []; }
     }
 
     _append(role, text) {
@@ -81,12 +70,10 @@
     async _ask() {
       const q = this._input.value.trim();
       if (!q) return;
-
       this._append('user', q);
       this._input.value = '';
       this._btn.disabled = true;
       const thinking = this._append('ai', 'Thinking…');
-
       try {
         const dashboardData = this._extractData();
         const res = await fetch(PROXY_URL, {
@@ -96,7 +83,6 @@
         });
         const json = await res.json();
         thinking.textContent = '🤖 ' + (json.insight || json.error || 'No response');
-        this.dispatchEvent(new Event('onInsightReceived'));
       } catch (err) {
         thinking.textContent = '🤖 Error: ' + err.message;
       } finally {
@@ -105,5 +91,5 @@
     }
   }
 
-  customElements.define('ai-chat-widget-v2', AIChatWidget);
+  customElements.define('iocfo-aichat3', IOCFOAIChat3);
 })();
