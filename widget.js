@@ -105,5 +105,5 @@
     }
   }
 
-  customElements.define('ai-chat-widget', AIChatWidget);
+  customElements.define('ai-chat-widget-v2', AIChatWidget);
 })();
