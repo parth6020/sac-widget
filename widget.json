@@ -5,14 +5,14 @@
   "vendor": "iOCFO",
   "id": "com.iocfo.ai.chat",
   "version": "1.0.0",
-  "icon": "https://your-cdn.example.com/icon.svg",
+  "icon": "",
   "eula": "",
   "license": "",
   "webcomponents": [
     {
       "kind": "main",
       "tag": "ai-chat-widget",
-      "url": "https://github.com/parth6020/sac-widget/blob/main/widget.js",
+      "url": "https://raw.githubusercontent.com/parth6020/sac-widget/main/widget.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
