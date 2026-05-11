@@ -12,7 +12,7 @@
     {
       "kind": "main",
       "tag": "ai-chat-widget",
-      "url": "https://raw.githubusercontent.com/parth6020/sac-widget/main/widget.js",
+      "url": "https://cdn.jsdelivr.net/gh/parth6020/sac-widget@main/widget.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
