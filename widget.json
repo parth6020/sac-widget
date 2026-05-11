@@ -12,7 +12,7 @@
     {
       "kind": "main",
       "tag": "ai-chat-widget",
-      "url": "https://your-cdn.example.com/widget.js",
+      "url": "https://github.com/parth6020/sac-widget/blob/main/widget.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
