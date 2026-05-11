@@ -1,17 +1,17 @@
 {
-  "name": "AI Insight Chat",
+  "name": "AI Insight Chat v2",
   "description": "Ask Claude/OpenAI questions about this dashboard",
-  "newInstancePrefix": "AIChat",
+  "newInstancePrefix": "AIChatV2",
   "vendor": "iOCFO",
-  "id": "com.iocfo.ai.chat",
-  "version": "1.0.0",
+  "id": "com.iocfo.ai.chat.v2",
+  "version": "2.0.0",
   "icon": "",
   "eula": "",
   "license": "",
   "webcomponents": [
     {
       "kind": "main",
-      "tag": "ai-chat-widget",
+      "tag": "ai-chat-widget-v2",
       "url": "https://cdn.jsdelivr.net/gh/parth6020/sac-widget@main/widget.js",
       "integrity": "",
       "ignoreIntegrity": true
