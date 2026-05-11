@@ -1,0 +1,46 @@
+{
+  "name": "AI Insight Chat",
+  "description": "Ask Claude/OpenAI questions about this dashboard",
+  "newInstancePrefix": "AIChat",
+  "vendor": "iOCFO",
+  "id": "com.iocfo.ai.chat",
+  "version": "1.0.0",
+  "icon": "https://your-cdn.example.com/icon.svg",
+  "eula": "",
+  "license": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "ai-chat-widget",
+      "url": "https://your-cdn.example.com/widget.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "proxyUrl": {
+      "type": "string",
+      "description": "URL of your BTP proxy /ai-insight endpoint",
+      "default": "https://sac-ai-proxy.cfapps.eu10.hana.ondemand.com/ai-insight"
+    },
+    "provider": {
+      "type": "string",
+      "description": "AI provider: 'claude' or 'openai'",
+      "default": "claude"
+    }
+  },
+  "methods": {},
+  "events": {
+    "onInsightReceived": {
+      "description": "Fired when AI response arrives"
+    }
+  },
+  "dataBindings": {
+    "myDataBinding": {
+      "feeds": [
+        { "id": "dimensions", "description": "Dimensions", "type": "dimension" },
+        { "id": "measures", "description": "Measures", "type": "mainStructureMember" }
+      ]
+    }
+  }
+}
