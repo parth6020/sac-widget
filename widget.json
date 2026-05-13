@@ -12,7 +12,7 @@
     {
       "kind": "main",
       "tag": "iocfo-aichat5",
-      "url": "https://cdn.jsdelivr.net/gh/parth6020/sac-widget@main/widget.js?v=v5",
+      "url": "https://cdn.jsdelivr.net/gh/parth6020/sac-widget@1843bb2b6a41cbd79ea47706f34d0208a08ad5eb/widget.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
