@@ -17,12 +17,7 @@
       "ignoreIntegrity": true
     }
   ],
-  "properties": {
-    "myDataBinding": {
-      "type": "DataBinding",
-      "description": "Data from SAC dashboard"
-    }
-  },
+  "properties": {},
   "methods": {},
   "events": {},
   "dataBindings": {
