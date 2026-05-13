@@ -1,9 +1,9 @@
 {
-  "name": "AI Chat",
+  "name": "AI Chat v5",
   "description": "Ask AI about dashboard data",
-  "newInstancePrefix": "AIChat",
+  "newInstancePrefix": "AIChat5",
   "vendor": "iOCFO",
-  "id": "com.iocfo.aichat3",
+  "id": "com.iocfo.aichat5",
   "version": "1.0.0",
   "icon": "",
   "eula": "",
@@ -11,13 +11,18 @@
   "webcomponents": [
     {
       "kind": "main",
-      "tag": "iocfo-aichat3",
-      "url": "https://cdn.jsdelivr.net/gh/parth6020/sac-widget@main/widget.js?v=20260511",
+      "tag": "iocfo-aichat5",
+      "url": "https://cdn.jsdelivr.net/gh/parth6020/sac-widget@main/widget.js?v=v5",
       "integrity": "",
       "ignoreIntegrity": true
     }
   ],
-  "properties": {},
+  "properties": {
+    "myDataBinding": {
+      "type": "DataBinding",
+      "description": "Data from SAC dashboard"
+    }
+  },
   "methods": {},
   "events": {},
   "dataBindings": {
